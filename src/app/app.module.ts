@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { Custom1Component } from './custom1/custom1.component';
 import { Custom2Component } from './custom2/custom2.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +22,9 @@ import { Custom2Component } from './custom2/custom2.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdCheckboxModule,
     RouterModule.forRoot([
       { path: 'custom1', component: Custom1Component },
       { path: 'custom2', component: Custom2Component },
