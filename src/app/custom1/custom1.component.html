@@ -1,5 +1,21 @@
-<p>
-  custom1 works!
-</p>
+<md-card>
+  <md-card-header>Put information</md-card-header>
 
----   <a routerLink="/custom2" routerLinkActive="active">Custom 2</a>  ---
+  <md-input-container class="example-full-width" [(ngModel)]="name">
+    <input mdInput placeholder="First name">
+  </md-input-container>
+
+  <md-input-container class="example-full-width" [(ngModel)]="surname">
+    <input mdInput placeholder="Last name">
+  </md-input-container>
+
+  <md-input-container class="example-full-width" [(ngModel)]="email">
+    <input mdInput placeholder="Email">
+  </md-input-container>
+
+  <md-input-container class="example-full-width">
+    <input mdInput placeholder="Password">
+  </md-input-container>
+
+  <button md-raised-button>Raised button</button>
+</md-card>

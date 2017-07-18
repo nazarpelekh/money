@@ -1,15 +1,23 @@
-<h1 class="lesson-title">
-  Angular 2 Essential. Урок 2 - Components. Настройка маршрутизации.
-</h1>
+<md-toolbar color="primary">
 
-<nav>
+  <span>MyApp</span>
+  <span class="example-spacer"></span>
+  <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon> Menu</button>
+
+</md-toolbar>
+
+<md-menu #appMenu="mdMenu">
   <!--routerLink - директива задает адрес для ссылки -->
   <!--routerLinkActive - директива устанавливает или удаляет класс в зависимости от состояния маршрута-->
-  <a routerLink="/custom1" routerLinkActive="active">List 1</a>
-  <a routerLink="/custom2" routerLinkActive="active">List 2</a>
-</nav>
+  <a md-menu-item routerLink="/custom1" routerLinkActive="active">Registration</a>
+  <a md-menu-item routerLink="/custom2" routerLinkActive="active">List Of Users</a>
+  <a md-menu-item routerLink="/custom3" routerLinkActive="active">Cash</a>
+  <a md-menu-item routerLink="/custom4" routerLinkActive="active">Chat</a>
+</md-menu>
 
-<div>
-  <!--router-outlet после данного элемента будет отображаться компонент, который выбирает роутер в соответствии с маршрутом-->
-  <router-outlet></router-outlet>
+<div class="wrap">
+  <div>
+    <!--router-outlet после данного элемента будет отображаться компонент, который выбирает роутер в соответствии с маршрутом-->
+    <router-outlet></router-outlet>
+  </div>
 </div>
