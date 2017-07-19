@@ -11,3 +11,6 @@ body {
 .wrap {
   padding: 2em 15em;
 }
+.mat-toolbar .mat-toolbar-row {
+  justify-content: space-between;
+}
