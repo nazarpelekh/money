@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-
 import { AppComponent } from './app.component';
 import { Custom1Component } from './custom1/custom1.component';
 import { Custom2Component } from './custom2/custom2.component';
@@ -13,6 +12,10 @@ import { Custom4Component } from './custom4/custom4.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule,  } from '@angular/material';
+
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import 'hammerjs';
 
@@ -26,6 +29,8 @@ import 'hammerjs';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
