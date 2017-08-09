@@ -1,6 +1,12 @@
 <ul>
+  <li *ngFor="let c of cash | async">
+    <input type="number" #updatetext [value]="c.text" />
+    <button (click)="updateItem(c.$key, updatetext.value)">Update</button>
+    <button (click)="deleteItem(c.$key)">Delete</button>
+    main price
+  </li>
   <li *ngFor="let item of items | async">
-    <input type="text" #updatetext [value]="item.text" />
+    <input type="number" #updatetext [value]="item.text" />
     <button (click)="updateItem(item.$key, updatetext.value)">Update</button>
     <button (click)="deleteItem(item.$key)">Delete</button>
   </li>
