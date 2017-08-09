@@ -11,7 +11,8 @@ import { Custom3Component } from './custom3/custom3.component';
 import { Custom4Component } from './custom4/custom4.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule,  } from '@angular/material';
+import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
@@ -34,12 +35,8 @@ import 'hammerjs';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdCardModule,
-    MdInputModule,
-    MdToolbarModule,
-    MdIconModule,
-    MdMenuModule,
+    MaterialModule,
+    FlexLayoutModule,
     RouterModule.forRoot([
       { path: 'custom1', component: Custom1Component },
       { path: 'custom2', component: Custom2Component },
